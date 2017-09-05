@@ -1,0 +1,16 @@
+<ion-toolbar darkergraytoolbar
+             class="toolbarPlan">
+
+  <!--<ion   #dateTime [(ngModel)]="hiddenDate" [hidden]="true"></ion>-->
+  <span ion-datepicker
+        (ionChanged)="setDate($event);"
+        [max]="maxDate" [min]="initDate2"
+        [value]="initDate"
+        [showMaxAndMin]="true"
+        [disabledDates]="disabledDates"
+        clear
+        class="ScheduleDate">
+		<span>{{initDate | date}} <ion-icon name="clipboard" item-left></ion-icon> </span>
+	</span>
+
+</ion-toolbar>
